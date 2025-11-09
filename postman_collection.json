@@ -1,0 +1,36 @@
+{
+  "info": {
+    "name": "Phishing Detection API",
+    "_postman_id": "12345678-1234-5678-1234-567812345678",
+    "description": "API for predicting phishing URLs using CNN + BiLSTM + XGBoost",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Predict URL Type",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"features\": [120, 3, 2, 1, 0, 2, 1, 0, 4, 0, 0]\n}"
+        },
+        "url": {
+          "raw": "https://your-render-url.onrender.com/predict",
+          "protocol": "https",
+          "host": [
+            "your-render-url",
+            "onrender",
+            "com"
+          ],
+          "path": ["predict"]
+        }
+      }
+    }
+  ]
+}
